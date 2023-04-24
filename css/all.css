@@ -225,7 +225,6 @@ section {
 #wrapper {
   width: 100%;
   margin: 0 auto;
-  overflow: none;
   height: 100%;
 }
 
@@ -3042,7 +3041,7 @@ header .layout .wrapper .interface ul li.basket a:hover {
 .contacts .layout .wrapper form .working-info .phones p {
   margin-bottom: 11px;
 }
-.contacts .layout .wrapper form .working-info .phones p:nth-last-of-type() {
+.contacts .layout .wrapper form .working-info .phones p:nth-last-of-type{
   margin-bottom: 0;
 }
 .contacts .layout .wrapper form .bottom-group {
@@ -3380,4 +3379,26 @@ footer .layout .wrapper .payment-methods ul li a img.mobile {
 }
 footer .layout .wrapper .payment-methods ul li:hover a img {
   display: none;
+}
+.form-submitted--success h3{
+  font-family: 'Poiret One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 70px;
+  color: #FFFBF5;
+}
+.form-submitted--success h4 {
+  font-family: 'Poiret One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 47px;
+  color: #FFFFFF;
+}
+.tabs__item {
+  display: none;
+}
+.tabs__item.--open {
+  display: block;
 }

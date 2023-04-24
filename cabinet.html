@@ -6,7 +6,6 @@
 	<meta name="viewport" content="width=device-width; initial-scale=1" />
 	<link rel="stylesheet" href="css/all.css" type="text/css" />
 	<link rel="stylesheet" href="css/fonts.css" type="text/css" />
-	<script type="text/javascript" src="js/main.js"></script>
 	<title>Aethetics</title>
 </head>
 
@@ -65,10 +64,10 @@
 						<div class="wrapper">
 							<h2>Особистий кабінет</h2>
 							<ul class="tabs">
-								<li><a class="contacs-info active" href="#">Контактна інформація</a></li>
-								<li><a class="adress-book" href="#">Адресна книга</a></li>
-								<li><a class="favourites" href="#">Список бажань</a></li>
-								<li><a class="history" href="#">Історія замовлень</a></li>
+								<li data-tab_title="Test tab title 1"><a class="contacs-info active" href="#">Контактна інформація</a></li>
+								<li data-tab_title="Test tab title 2"><a class="adress-book" href="#">Адресна книга</a></li>
+								<li data-tab_title="Test tab title 3"><a class="favourites" href="#">Список бажань</a></li>
+								<li data-tab_title="Test tab title 4"><a class="history" href="#">Історія замовлень</a></li>
 							</ul>
 							<div class="window">
 								<div id="tab-contacts">
@@ -86,7 +85,7 @@
 											</div>
 											<div class="column">
 												<label for="telephone">Номер телефону</label>
-												<input type="telephone" class="telephone" id="telephone"
+												<input type="telephone" class="telephone"
 													placeholder="+38 068 564 77 99">
 												<label for="date-of-birth">Дата народження</label>
 												<input type="text" class="date-of-birth" id="date-of-birth"
@@ -649,6 +648,7 @@
 			</div>
 		</footer>
 	</div>
+	<script src="js/main.js"></script>
 </body>
 
 </html>
