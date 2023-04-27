@@ -64,15 +64,16 @@
 						<div class="wrapper">
 							<h2>Особистий кабінет</h2>
 							<ul class="tabs">
-								<li data-tab_title="Test tab title 1"><a class="contacs-info active" href="#">Контактна інформація</a></li>
-								<li data-tab_title="Test tab title 2"><a class="adress-book" href="#">Адресна книга</a></li>
-								<li data-tab_title="Test tab title 3"><a class="favourites" href="#">Список бажань</a></li>
-								<li data-tab_title="Test tab title 4"><a class="history" href="#">Історія замовлень</a></li>
+								<li data-tab_title="Test tab title 1"><button type="button" class="contacs-info active tabs__btn tabs__btn_active" >Контактна інформація</button></li>
+								<li data-tab_title="Test tab title 2"><button type="button" class="adress-book tabs__btn" >Адресна книга</button></li>
+								<li data-tab_title="Test tab title 3"><button type="button" class="favourites tabs__btn" >Список бажань</button></li>
+								<li data-tab_title="Test tab title 4"><button type="button" class="history tabs__btn" >Історія замовлень</button></li>
+								<button type="button"></button>
 							</ul>
 							<div class="window">
 								<div id="tab-contacts">
 									<h3 class="tab contacts-info mobile">Контактна інформація</h3>
-									<form action="post" class="for-contacts">
+									<form action="post" class="for-contacts tabs__pane tabs__pane_show">
 										<div class="flex">
 											<div class="column">
 												<label for="name">Ваше ім’я</label>
@@ -98,7 +99,7 @@
 								</div>
 								<div id="tab-address">
 									<h3 class="tab adress-book mobile">Адресна книга</h3>
-									<form action="post" class="for-address">
+									<form action="post" class="for-address tabs__pane">
 										<div class="flex">
 											<div class="column">
 												<div class="contact">
@@ -146,7 +147,7 @@
 								</div>
 								<div id="tab-favourites">
 									<h3 class="tab favourites mobile">Список бажань</h3>
-									<ul>
+									<ul class="tabs__pane">
 										<li class="item">
 											<div class="column for-image">
 												<div class="image-holder">
@@ -335,7 +336,7 @@
 								</div>
 								<div id="tab-history">
 									<h3 class="tab history mobile">Історія замовлень</h3>
-									<ul>
+									<ul class="tabs__pane">
 										<div class="flex">
 											<li class="order">
 												<div class="description">

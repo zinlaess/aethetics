@@ -2351,7 +2351,7 @@ header .layout .wrapper .interface ul li.basket a:hover {
     display: none;
   }
 }
-.cabinet .layout .wrapper .tabs li a {
+.cabinet .layout .wrapper .tabs li button {
   display: block;
   padding-bottom: 7px;
   font-family: "Candara";
@@ -2363,16 +2363,16 @@ header .layout .wrapper .interface ul li.basket a:hover {
   position: relative;
 }
 @media (max-width: 1140px) {
-  .cabinet .layout .wrapper .tabs li a {
+  .cabinet .layout .wrapper .tabs li button {
     font-size: clamp(20px, 2.3vw, 26px);
   }
 }
-.cabinet .layout .wrapper .tabs li a.active, .cabinet .layout .wrapper .tabs li a:hover {
+.cabinet .layout .wrapper .tabs li button.active, .cabinet .layout .wrapper .tabs li button:hover {
   font-weight: 400;
   letter-spacing: -0.25px;
   margin: 0;
 }
-.cabinet .layout .wrapper .tabs li a.active::before, .cabinet .layout .wrapper .tabs li a:hover::before {
+.cabinet .layout .wrapper .tabs li button.active::before, .cabinet .layout .wrapper .tabs li button:hover::before {
   display: block;
   content: "";
   position: absolute;
@@ -2447,7 +2447,7 @@ header .layout .wrapper .interface ul li.basket a:hover {
   margin-bottom: 30px;
 }
 .cabinet .layout .wrapper .window #tab-contacts form.for-contacts {
-  display: none;
+  display: flex;
   max-width: 928px;
   margin: 0 auto;
 }
@@ -2673,7 +2673,7 @@ header .layout .wrapper .interface ul li.basket a:hover {
   margin-bottom: 30px;
 }
 .cabinet .layout .wrapper .window #tab-history ul .flex {
-  display: flex;
+  display: none;
   width: 100%;
   justify-content: space-between;
   margin-bottom: 59px;
