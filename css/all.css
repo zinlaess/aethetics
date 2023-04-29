@@ -2351,7 +2351,7 @@ header .layout .wrapper .interface ul li.basket a:hover {
     display: none;
   }
 }
-.cabinet .layout .wrapper .tabs li button {
+.cabinet .layout .wrapper .tabs li a {
   display: block;
   padding-bottom: 7px;
   font-family: "Candara";
@@ -2363,16 +2363,16 @@ header .layout .wrapper .interface ul li.basket a:hover {
   position: relative;
 }
 @media (max-width: 1140px) {
-  .cabinet .layout .wrapper .tabs li button {
+  .cabinet .layout .wrapper .tabs li a {
     font-size: clamp(20px, 2.3vw, 26px);
   }
 }
-.cabinet .layout .wrapper .tabs li button.active, .cabinet .layout .wrapper .tabs li button:hover {
+.cabinet .layout .wrapper .tabs li a.active, .cabinet .layout .wrapper .tabs li a:hover {
   font-weight: 400;
   letter-spacing: -0.25px;
   margin: 0;
 }
-.cabinet .layout .wrapper .tabs li button.active::before, .cabinet .layout .wrapper .tabs li button:hover::before {
+.cabinet .layout .wrapper .tabs li a.active::before, .cabinet .layout .wrapper .tabs li a:hover::before {
   display: block;
   content: "";
   position: absolute;
@@ -3401,4 +3401,10 @@ footer .layout .wrapper .payment-methods ul li:hover a img {
 }
 .tabs__item.--open {
   display: block;
+}
+.content {
+  display: none;
+}
+.content--active {
+  display: flex;
 }

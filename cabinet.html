@@ -64,16 +64,15 @@
 						<div class="wrapper">
 							<h2>Особистий кабінет</h2>
 							<ul class="tabs">
-								<li data-tab_title="Test tab title 1"><button type="button" class="contacs-info active tabs__btn tabs__btn_active" >Контактна інформація</button></li>
-								<li data-tab_title="Test tab title 2"><button type="button" class="adress-book tabs__btn" >Адресна книга</button></li>
-								<li data-tab_title="Test tab title 3"><button type="button" class="favourites tabs__btn" >Список бажань</button></li>
-								<li data-tab_title="Test tab title 4"><button type="button" class="history tabs__btn" >Історія замовлень</button></li>
-								<button type="button"></button>
+								<li class=""><a href="#" class="contacs-info tab__btn active" >Контактна інформація</a></li>
+								<li class=""><a href="#" class="adress-book tab__btn" >Адресна книга</a></li>
+								<li class=""><a href="#" class="favourites tab__btn" >Список бажань</a></li>
+								<li class=""><a href="#" class="history tab__btn" >Історія замовлень</a></li>
 							</ul>
+<!--							<button type="button"></button>-->
 							<div class="window">
-								<div id="tab-contacts">
-									<h3 class="tab contacts-info mobile">Контактна інформація</h3>
-									<form action="post" class="for-contacts tabs__pane tabs__pane_show">
+								<div >
+									<form action="post" class="for-contacts content content--active">
 										<div class="flex">
 											<div class="column">
 												<label for="name">Ваше ім’я</label>
@@ -97,9 +96,8 @@
 										<button type="submit" class="btn">Зберегти</button>
 									</form>
 								</div>
-								<div id="tab-address">
-									<h3 class="tab adress-book mobile">Адресна книга</h3>
-									<form action="post" class="for-address tabs__pane">
+								<div >
+									<form action="post" class="for-address content">
 										<div class="flex">
 											<div class="column">
 												<div class="contact">
@@ -145,9 +143,8 @@
 										<button type="submit" class="btn">Зберегти</button>
 									</form>
 								</div>
-								<div id="tab-favourites">
-									<h3 class="tab favourites mobile">Список бажань</h3>
-									<ul class="tabs__pane">
+								<div >
+									<ul class="content">
 										<li class="item">
 											<div class="column for-image">
 												<div class="image-holder">
@@ -334,9 +331,8 @@
 										</li>
 									</ul>
 								</div>
-								<div id="tab-history">
-									<h3 class="tab history mobile">Історія замовлень</h3>
-									<ul class="tabs__pane">
+								<div>
+									<ul class="content">
 										<div class="flex">
 											<li class="order">
 												<div class="description">

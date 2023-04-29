@@ -1,59 +1,26 @@
-class ItcTabs {
-    constructor(target, config) {
-        const defaultConfig = {}
-        this._config = Object.assign(defaultConfig, config)
-        this._elTabs = typeof target === 'string' ? document.querySelector(target) : target
-        this._elButtons = this._elTabs.querySelectorAll('.tabs__btn')
-        this._elPanes = this._elTabs.querySelectorAll('.tabs__pane')
-        this._eventShow = new Event('tab.itc.change')
-        this._init()
-        this._events()
-    }
-    _init() {
-        this._elTabs.setAttribute('role', 'tablist')
-        this._elButtons.forEach((el, index) => {
-            el.dataset.index = index
-            el.setAttribute('role', 'tab')
-            this._elPanes[index].setAttribute('role', 'tabpanel')
-        })
-    }
-    show(elLinkTarget) {
-        const elPaneTarget = this._elPanes[elLinkTarget.dataset.index]
-        const elLinkActive = this._elTabs.querySelector('.tabs__btn_active')
-        const elPaneShow = this._elTabs.querySelector('.tabs__pane_show')
-        if (elLinkTarget === elLinkActive) {
-            return
+const tabs = document.querySelectorAll(".tab__btn");
+const contents = document.querySelectorAll(".content");
+
+for (let i = 0; i < tabs.length; i++) {
+    tabs[i].addEventListener("click", ( event ) => {
+
+        let tabsChildren = event.target.parentElement.parentElement.children;
+        console.log(tabsChildren)
+        for (let t = 0; t < tabsChildren.length; t++) {
+            let tabsGrandson = tabsChildren[t].firstChild;
+            console.log(tabsGrandson)
+            tabsGrandson.classList.remove("active");
+
         }
-        elLinkActive ? elLinkActive.classList.remove('tabs__btn_active') : null
-        elPaneShow ? elPaneShow.classList.remove('tabs__pane_show') : null
-        elLinkTarget.classList.add('tabs__btn_active')
-        elPaneTarget.classList.add('tabs__pane_show')
-        this._elTabs.dispatchEvent(this._eventShow)
-        elLinkTarget.focus()
-    }
-    showByIndex(index) {
-        const elLinkTarget = this._elButtons[index]
-        elLinkTarget ? this.show(elLinkTarget) : null
-    }
-    _events() {
-        this._elTabs.addEventListener('click', (e) => {
-            const target = e.target.closest('.tabs__btn');
-            if (target) {
-                e.preventDefault()
-                this.show(target)
-            }
-        })
-    }
+        tabs[i].classList.add("active");
+        let tabContentChildren = event.target.parentElement.parentElement.nextElementSibling.children;
+        console.log(tabContentChildren)
+        for (let c = 0; c < tabContentChildren.length; c++) {
+            let tabContentGrandson = tabContentChildren[c].firstChild;
+            console.log(tabContentGrandson)
+            tabContentGrandson.classList.remove("content--active");
+        }
+        contents[i].classList.add("content--active");
+
+    });
 }
-
-const elTab = document.querySelector('.tabs')
-// инициализация elTab как табы
-const tab = new ItcTabs(elTab)
-
-const index = localStorage.getItem('tabs-index')
-index > -1 ? tab.showByIndex(index) : null
-
-elTab.addEventListener('tab.itc.change', (e) => {
-    const index = elTab.querySelector('.tabs__btn_active').dataset.index
-    localStorage.setItem('tabs-index', index)
-})
